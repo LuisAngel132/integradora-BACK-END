@@ -16,8 +16,8 @@ class ReporteController {
   }
   async reporte({response,params=id}){
     const id = params.id
-    const reporte = await Reporte.query() // 👈now have access to all query builder methods
-    .where('User_id',id)
+    const reporte = await Reporte.all()
+
     return response.json(
 
         reporte
