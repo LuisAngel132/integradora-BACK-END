@@ -16,7 +16,7 @@ class ReporteController {
   }
   async reporte({response,params=id}){
     const id = params.id
-    const reporte = await Reporte.findByOrFail('User_id',id)
+    const reporte = await Reporte.find('User_id',id)
 
     return response.json(
 
