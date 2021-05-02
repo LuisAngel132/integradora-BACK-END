@@ -15,9 +15,8 @@ class ReporteController {
       })
 
   }
-  async reporte({response,params=id}){
-    const id = params.id
-    const reporte = await Database.table('reportes').select('*').where('User_id',id)
+  async reporte({response,auth}){
+    const reporte = await Database.table('reportes').select('*').where('User_id',auth.user.id)
 
     return response.json(
 
