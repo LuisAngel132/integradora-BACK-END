@@ -14,6 +14,7 @@ Route.get('/perfil','UserController.Miperfil')
 Route.get('/reporte/','ReporteController.reporte')
 Route.post('/plantafoto/:id','PlantaController.Foto')
 Route.delete('/logout','AuthController.logout')
+Route.get('/user','ReporteController.Userid')
+
 }).middleware('auth');
 Route.post('/reporte','ReporteController.store')
-Route.get('/user','ReporteController.Userid')
