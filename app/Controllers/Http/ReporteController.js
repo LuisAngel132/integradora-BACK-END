@@ -21,19 +21,19 @@ class ReporteController {
     return response.json(
 
         reporte
-
+        
     )
 
   }
   async Userid({response,auth}){
-   const  id = auth.user.id
+    const  id = auth.user.id
 
-    return response.json(
-       id
+     return response.json(
+        id
 
-    )
+     )
 
-  }
+   }
 }
 
 

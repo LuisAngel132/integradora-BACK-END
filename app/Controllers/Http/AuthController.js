@@ -8,7 +8,8 @@ class AuthController {
         const {email,password} = request.only(['email','password'])
         const x =  await Database.table('users').where('email', email).first()
         const token = await auth.attempt (email,password)
-        return response.ok(token)
+
+        return response.ok(auth.user.id)
     }
     async logout ({response,auth})
     {
@@ -18,6 +19,7 @@ class AuthController {
           data: "eliminado"
         })
     }
+
 }
 
 module.exports = AuthController
