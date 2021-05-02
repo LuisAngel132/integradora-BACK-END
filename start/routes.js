@@ -13,6 +13,6 @@ Route.group(()=>{
 Route.get('/perfil','UserController.Miperfil')
 Route.get('/reporte/','ReporteController.reporte')
 Route.post('/plantafoto/:id','PlantaController.Foto')
-Route.post('/reporte','ReporteController.store')
 Route.delete('/logout','AuthController.logout')
 }).middleware('auth');
+Route.post('/reporte','ReporteController.store')
