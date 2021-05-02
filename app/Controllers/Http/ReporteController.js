@@ -30,7 +30,7 @@ class ReporteController {
 
    const reporte = await Database
     .table('users')
-    .orderBy('id	', 'desc')
+    .orderBy('id	', 'desc').limit(1)
     return response.json(
 
                reporte
