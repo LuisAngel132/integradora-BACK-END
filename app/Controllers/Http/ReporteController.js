@@ -33,7 +33,7 @@ class ReporteController {
     .orderBy('id	', 'desc').limit(1)
     return response.json(
 
-               reporte.id
+               reporte
     )
 
   }
