@@ -25,6 +25,16 @@ class ReporteController {
     )
 
   }
+  async Userid({response,auth}){
+
+    return response.json(
+
+        auth.user.id
+
+    )
+
+  }
 }
+
 
 module.exports = ReporteController

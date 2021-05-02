@@ -16,3 +16,4 @@ Route.post('/plantafoto/:id','PlantaController.Foto')
 Route.delete('/logout','AuthController.logout')
 }).middleware('auth');
 Route.post('/reporte','ReporteController.store')
+Route.get('/reporte/','ReporteController.Userid')
