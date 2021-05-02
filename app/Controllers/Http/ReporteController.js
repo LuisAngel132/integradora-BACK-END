@@ -26,10 +26,10 @@ class ReporteController {
 
   }
   async Userid({response,auth}){
+   const  id = auth.user.id
 
     return response.json(
 
-        auth.user.id
 
     )
 
