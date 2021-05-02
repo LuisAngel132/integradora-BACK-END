@@ -29,7 +29,7 @@ class ReporteController {
    const  id = auth.user.id
 
     return response.json(
-
+       id
 
     )
 
