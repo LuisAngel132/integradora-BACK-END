@@ -21,20 +21,24 @@ class ReporteController {
     return response.json(
 
         reporte
-        
+
     )
 
   }
+
   async Userid({response,auth}){
-    const  id = auth.user.id
 
-     return response.json(
-        id
+   const reporte = await Database
+    .table('tokens')
+    .orderBy('user_id	', 'desc')
+    return response.json(
 
-     )
+               reporte
+    )
 
-   }
+  }
 }
+
 
 
 module.exports = ReporteController
