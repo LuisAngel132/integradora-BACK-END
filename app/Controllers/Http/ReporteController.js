@@ -29,12 +29,11 @@ class ReporteController {
   async Userid({response,auth}){
 
    const reporte = await Database
-    .table('tokens')
+    .table('users')
     .select('*')
     return response.json(
-
-               reporte
-    )
+     reporte
+     )
 
   }
 }
