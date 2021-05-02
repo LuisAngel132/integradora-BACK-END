@@ -30,10 +30,11 @@ class ReporteController {
 
    const reporte = await Database
     .table('users')
-    .select('*')
+    .orderBy('id	', 'desc')
     return response.json(
-     reporte
-     )
+
+               reporte
+    )
 
   }
 }
