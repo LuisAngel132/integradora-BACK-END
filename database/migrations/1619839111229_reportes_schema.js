@@ -10,8 +10,8 @@ class ReportesSchema extends Schema {
       table.integer('User_id').unsigned().references('id').inTable('users')
       table.integer('Sensor_temperatura').notNullable()
       table.integer('Sensor_humedad').notNullable()
-      table.integer('Enfrio').notNullable()
-      table.integer('Rego').notNullable()
+      table.string('Enfrio').notNullable()
+      table.string('Rego').notNullable()
       table.timestamps()
     })
   }
