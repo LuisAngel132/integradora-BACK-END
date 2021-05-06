@@ -8,10 +8,10 @@ class ReportesSchema extends Schema {
     this.create('reportes', (table) => {
       table.increments()
       table.integer('User_id').unsigned().references('id').inTable('users')
-      table.integer('Sensor_temperatura').notNullable()
-      table.integer('Sensor_humedad').notNullable()
-      table.string('Enfrio').notNullable()
-      table.string('Rego').notNullable()
+      table.integer('Sensor_temperatura')
+      table.integer('Sensor_humedad')
+      table.string('Enfrio')
+      table.string('Rego')
       table.timestamps()
     })
   }

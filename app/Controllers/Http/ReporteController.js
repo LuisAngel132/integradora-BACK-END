@@ -6,7 +6,7 @@ class ReporteController {
   async store({ request,response})
   {
 
-      const userData = request.only(['User_id','Sensor_temperatura','Sensor_humedad',' Enfrio','Rego'])
+      const userData = request.only(['User_id','Sensor_temperatura','Sensor_humedad','Enfrio','Rego'])
       const user = await Reporte.create(userData)
 
       return response.created({
